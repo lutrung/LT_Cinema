@@ -1,0 +1,86 @@
+.application{
+    .application__header{
+        max-width: 1000px;
+        height: 100px;
+        margin: auto;
+    }
+    .application__backGround{
+        padding: 50px 20px;
+        color: white;
+        height: auto;
+        .myContainer{
+            max-width: 1000px;
+            margin:  auto;
+            height: 100%;
+            .application__backGround-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                .item__right{
+                    position: relative;
+                    .item__right-phone{
+                        width: 100%;
+                        padding: 0 28%;
+                    }
+                    .item__right-slick{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 3% 30%;
+                        .slick-slider{
+                            .slick-list{
+                                border-radius: 20px;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            button{
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+                .item__left{
+                    h1{
+                        font-weight: bold;
+                        font-size: 30px;
+                        color: white;
+                    }
+                    p{
+                        margin: 20px 0;
+                        font-weight: normal;
+                        font-size: 15px;
+                        color: white;
+                    }
+                    button{
+                        background-color: orangered;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 17px;
+                        margin-bottom: 10px;
+                    }
+                    span{
+                        font-weight: normal;
+                        font-size: 15px;
+                        color: white;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    .application__backGround-item{
+        flex-direction: column;
+        text-align: center;
+        .item__left{
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.taoLichChieu_content{
+    .taoLichChieuModal{
+        .form_LR{
+             display: flex;
+             font-size: 17px;
+            .form_Left{
+                width: 100%;
+                padding: 0 5px;
+                .form-group{
+                    margin-bottom: 10px;
+                }
+            }
+            .form_Right{
+                width: 100%;
+                padding: 0 5px;
+                .form-group{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

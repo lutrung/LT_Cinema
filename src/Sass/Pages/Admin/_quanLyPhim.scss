@@ -1,0 +1,21 @@
+.quanLyPhim_content{
+    .bangPhim{
+        .table{
+            height: 600px;
+            .head{
+                th{
+                    white-space: nowrap;
+                }
+            }
+            .body{
+                .moTa, .tenPhim{
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    display: -webkit-box !important;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

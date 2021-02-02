@@ -1,0 +1,199 @@
+.showTime {
+    .myContainer {
+        max-width: 800px;
+        margin: auto;
+        .showtime__title {
+            .nav-tabs {
+                justify-content: center;
+                border: none;
+                a {
+                    font-size: 20px;
+                    color: black;
+                    font-weight: normal;
+                    border: none;
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        border: none;
+                    }
+                }
+            }
+        }
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            color: orangered;
+            border: none;
+            background-color: transparent;
+            &:hover {
+                transform: none;
+            }
+        }
+        .showtime__content {
+            display: flex;
+            justify-content: center;
+            .tab-pane{
+                width: 100%;
+                .showtime__movieList {
+                    .showtime__movieList-card {
+                        outline: none;
+                        position: relative;
+                        cursor: pointer;
+                        overflow: hidden;
+                        height: 300px;
+                        margin: 10px 0;
+                        .card__item {
+                            position: relative;
+                            border-radius: 5%;
+                            overflow: hidden;
+                            .card__item-overlay {
+                                position: absolute;
+                                opacity: 0;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                width: 100%;
+                                background: linear-gradient(to top,#000,transparent 100%);
+                                transition: all 1s;
+                                .card__item-playIcon {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    height: 50px;
+                                    width: 50px;
+                                    font-size: 15px;
+                                    color: white;
+                                    line-height: 50px;
+                                    text-align: center;
+                                    background-color: #929292d0;
+                                    border: 1px solid white;
+                                    border-radius: 50%;
+                                    opacity: 0.5;
+                                    transition: all 1s;
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                            .card__item-image {
+                                height: 243px;
+                                width: 100%;
+                            }
+                        }
+                        .card__info, .card__info-will {
+                            display: flex;
+                            align-items: flex-start;
+                            padding: 10px 0;
+                            .card__info-age{
+                                display: inline-block;
+                                border-radius: 4px;
+                                background: #fb4226;
+                                color: #fff;
+                                font-size: 14px;
+                                padding: 0 5px;
+                                margin-right: 8px;
+                                font-weight: 600;
+                            }
+                            .card__info-name {
+                                // white-space: nowrap;
+                                // overflow: hidden;
+                                // text-overflow: ellipsis;
+                                // font-size: 15px;
+                                // color: black;
+                                // font-weight: bold;
+                                // margin: 10px 0px;
+                                // word-break: break-word;
+
+                                overflow: hidden;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                display: -webkit-box !important;
+                                margin: 0;
+                            }
+                        }
+                        .card__button {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            font-size: 20px;
+                            color: white;
+                            font-weight: bold;
+                            background: linear-gradient(270deg,#fb4226,#ce3017);
+                            display: none;
+                            outline: none;
+                            border: none;
+                            transition: all 0.5s;
+                            &:hover {
+                                background: linear-gradient(270deg,#ce3017,#fb4226);
+                            }
+                        }
+                        &:hover {
+                            .card__button {
+                                display: block;
+                                transition: all 1s;
+                            }
+                            .card__info {
+                                display: none;
+                                transition: all 1s;
+                            }
+                            .card__item-overlay {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .slick-initialized .slick-slide > div {
+                        margin:15px;
+                    }
+                    .slick-prev:before, .slick-next:before{
+                        color: rgb(95, 93, 93);
+                        font-size: 30px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 15px;
+
+                    }
+                    .slick-prev {
+                        left: -35px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .showTime{
+        .myContainer{
+            .showtime__content{
+                .showtime__movieList{
+                    .showtime__movieList-card{
+                        height: 400px;
+                        .card__item{
+                            .card__item-image {
+                                height: 270px !important;
+                            }
+                        }
+
+                    }
+                    button{
+                        display: none !important;
+                    }
+                    .card__info, .card__info-will {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .showTime{
+        .myContainer{
+            .showtime__content{
+                .showtime__movieList{
+                   max-width: none;
+                }
+            }
+        }
+    }
+}

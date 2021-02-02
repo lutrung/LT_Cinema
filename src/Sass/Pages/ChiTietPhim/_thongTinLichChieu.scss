@@ -1,0 +1,199 @@
+.showtimesInformation {
+    padding-bottom: 50px;
+    background-color: rgb(10, 32, 41);
+    .myContainer {
+        max-width: 800px;
+        margin: auto;
+        color: white;
+        .showtimesInformation__title {
+            .nav-tabs {
+                justify-content: center;
+                border: none;
+                a {
+                    font-size: 20px;
+                    color: white;
+                    font-weight: normal;
+                    border: none;
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        border: none;
+                    }
+                }
+            }
+        }
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            color: orangered;
+            border: none;
+            background-color: transparent;
+            &:hover {
+                transform: none;
+            }
+        }
+        .showtimesInformation__content{
+            .showTime{
+                background-color: white;
+                width: 100%;
+                height: 550px;
+                border-radius: 10px;
+                overflow: hidden;
+                .row{
+                    width: 100%;
+                    margin: 0;
+                    height: 100%;
+                    .showtimesInformation__logo{
+                        padding: 0;
+                        border-right: 1px solid #ddd;
+                        .logo__item{
+                            text-align: center;
+                            padding: 1rem 1rem;
+                            position: relative;
+                            img{
+                                width: 50px;
+                                opacity: 0.5;
+                            }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                width: calc(100% - 40px);
+                                transform: translateX(-50%);
+                                border-bottom: 2px solid rgba(238,238,238,.88);
+                            }
+                        }
+                        .logo__item.active {
+                            color: #fff;
+                            background-color: whitesmoke;
+                            img{
+                                opacity: 1;
+                            }
+                            &::after{
+                                border-bottom: 2px solid red;
+                                box-shadow: 0 -3px 10px 0 red;
+                            }
+                        }
+                    }
+                    .showtimesInformation__showTimes{
+                        padding: 0;
+                        height: 100%;
+                        display: block;
+                        overflow-y: scroll;
+                        .showTimes__allCinema{
+                            .showTimes__cinema{
+                                padding: 20px;
+                                position: relative;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 50%;
+                                    width: calc(100% - 40px);
+                                    transform: translateX(-50%);
+                                    border-bottom: 2px solid rgba(238,238,238,.88);
+                                }
+                                .showTimes__cinema-top{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    margin-bottom: 5px;
+                                    cursor: pointer;
+                                    img{
+                                        width: 50px;
+                                        height: 50px;
+                                        margin-right: 10px;
+                                    }
+                                    .nameCinema{
+                                        color: black;
+                                        font-size: 15px;
+                                        font-weight: bold;
+                                    }
+                                    .point{
+                                        font-size: 12px;
+                                        color: #9b9b9b;
+                                    }
+                                }
+                                .hidden__showTimes{
+                                    display: none;
+                                }
+                                .showTimes__cinema-bottom{
+                                    .digital{
+                                        color: orangered;
+                                        font-size: 15px;
+                                        font-weight: bold;
+                                        margin: 10px 0;
+                                    }
+                                    .times{
+                                        float: left;
+                                        font-size: 15px;
+                                        font-weight: bold;
+                                        margin: 0 10px 10px 0;
+                                        padding:5px 10px;
+                                        transition: all .5s;
+                                        display: block;
+                                        text-align: center;
+                                        background-color: rgba(246, 246, 246, 0.5);
+                                        border-radius: 7px;
+                                        color: #9b9b9b;
+                                        border: 1px solid #e4e4e4;
+                                        .time__start{
+                                            font-size: 18px;
+                                            color: #108f3e;
+                                        }
+                                        &:hover{
+                                            .time__start{
+                                                color: #fb4226;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .showtimesInformation__showTimes::-webkit-scrollbar{
+                        width: 5px;
+                        background-color: #ddd;
+                    }
+                    .showtimesInformation__showTimes::-webkit-scrollbar-thumb{
+                        background-color: gray;
+                    }
+                    .showtimesInformation__showTimes::-webkit-scrollbar{
+                        width: 5px;
+                        background-color: #ddd;
+                    }
+                    .showtimesInformation__showTimes::-webkit-scrollbar-thumb{
+                        background-color: gray;
+                    }
+                }
+            }
+            .infomation{
+                background-color: transparent;
+                color: black;
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                overflow: hidden;
+                padding: 50px 20px;
+                .infomation__content-left, .infomation__content-right{
+                    .row{
+                        margin-bottom: 20px;
+                        .title{
+                            font-weight: bold;
+                            font-size: 17px;
+                            color: white;
+                        }
+                        .content{
+                            font-weight: normal;
+                            font-size: 14px;
+                            color: rgb(218, 218, 218);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

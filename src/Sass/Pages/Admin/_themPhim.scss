@@ -1,0 +1,14 @@
+.modal-dialog{
+    max-width: 700px;
+    .modal-content{
+        .modal_header{
+            justify-content: center;
+            text-align: center;
+            span{
+                font-size: 25px;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}

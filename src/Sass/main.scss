@@ -1,0 +1,31 @@
+//Helper
+//Vendor
+//Base
+@import './Base/reset';
+//Components
+//Layouts
+@import './Layout/header';
+@import './Layout/headermini';
+@import './Layout/footer';
+@import './Pages/TrangChu/carousel';
+@import './Pages/TrangChu/search';
+@import './Pages/TrangChu/showTime';
+@import './Pages/TrangChu/movieTheater';
+@import './Pages/TrangChu/infomation';
+@import './Pages/TrangChu/application';
+@import './Pages/User/dangKy';
+@import './Pages/User/dangNhap';
+@import './Pages/User/capNhat';
+@import './Pages/ChiTietPhim/thongTinPhim';
+@import './Pages/ChiTietPhim/thongTinLichChieu';
+@import './Pages/ChiTietPhim/chiTietPhongVe';
+@import './Pages/User/thongTinCaNhan';
+@import './Pages/Admin/quanLyNguoiDung';
+@import './Pages/Admin/quanLyPhim';
+@import './Pages/Admin/formTaoLichChieu';
+@import './Pages/Admin/formThemPhim';
+@import './Pages/Admin/themPhim';
+//Pages
+
+//Theme
+
